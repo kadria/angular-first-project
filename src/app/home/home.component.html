@@ -1,0 +1,18 @@
+<form>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Add your wishes</h4>
+          <input type="text" name="item" [(ngModel)]="wish">
+          <input type="submit" [value]="submit_text" (click)="addWished()">
+      </div>
+      <div class="col-md-6">
+          <h4>Your wishes({{count_wishes}})</h4>
+          <p *ngFor="let wish of wishes; let i = index" (click)="removeItem(i)">
+            {{wish}}
+          </p>
+          
+      </div>
+    </div>
+  </div> 
+</form>
